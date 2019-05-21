@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
-        android:background="@drawable/login"
+        android:background="@drawable/signhome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout

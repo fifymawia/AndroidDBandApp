@@ -3,6 +3,7 @@ package com.daenjel.ilearn.Views;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.daenjel.ilearn.Strands;
 import com.daenjel.ilearn.ViewModel.HomeGridAdapter;
 import com.daenjel.ilearn.Interface.ClickListener;
 import com.daenjel.ilearn.Interface.RecyclerTouchListener;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mListView.addOnItemTouchListener(new RecyclerTouchListener(this, mListView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
+                startActivity(new Intent(getApplicationContext(), Strands.class));
                 Toast.makeText(getApplicationContext(), "Learning area "+position, Toast.LENGTH_SHORT).show();
             }
 
