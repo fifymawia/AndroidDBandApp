@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">iLearn</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Baby Junior</string>
+    <string name="nav_header_subtitle">baby.junior@eg.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_grade">Grade</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_faqs">FAQs</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_logout">LogOut</string>
+    <string name="todo">todo</string>
+</resources>
