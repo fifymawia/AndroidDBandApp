@@ -13,4 +13,13 @@
     <string name="menu_share">Share</string>
     <string name="menu_logout">LogOut</string>
     <string name="todo">todo</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account"><u>Don\'t have an account?</u></string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account"><u>Already have an account?</u></string>
 </resources>

@@ -94,9 +94,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            //startActivity(new Intent(getApplicationContext(),Splash.class));
+            startActivity(new Intent(getApplicationContext(), Login.class));
         } else if (id == R.id.nav_grade) {
-
+            startActivity(new Intent(getApplicationContext(), SignUp.class));
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_faqs) {
