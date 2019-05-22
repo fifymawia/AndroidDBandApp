@@ -10,7 +10,18 @@
         android:id="@+id/contentDisplay"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </WebView>
+
+    <ToggleButton
+        android:id="@+id/zoomer"
+        android:textOff=""
+        android:textOn=""
+        android:background="@drawable/zoomer"
+        android:layout_margin="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

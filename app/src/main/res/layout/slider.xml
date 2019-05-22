@@ -23,6 +23,7 @@
             android:layout_margin="30dp"
             android:entries="@array/slides"
             android:paddingLeft="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:background="@drawable/edit_border"
             android:layout_below="@id/txtTitle"
             android:layout_width="match_parent"
