@@ -13,7 +13,6 @@ import com.daenjel.ilearn.Interface.ClickListener;
 import com.daenjel.ilearn.Interface.RecyclerTouchListener;
 import com.daenjel.ilearn.R;
 import com.daenjel.ilearn.Model.Sub_Strand_Model;
-import com.daenjel.ilearn.Slides;
 import com.daenjel.ilearn.ViewModel.SubStrandAdapter;
 
 import java.util.ArrayList;

@@ -1,5 +1,6 @@
-package com.daenjel.ilearn;
+package com.daenjel.ilearn.Views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.daenjel.ilearn.Interface.ClickListener;
 import com.daenjel.ilearn.Interface.RecyclerTouchListener;
+import com.daenjel.ilearn.R;
 import com.daenjel.ilearn.ViewModel.SlidesAdapter;
 
 import java.util.ArrayList;
@@ -34,7 +36,7 @@ public class Slides extends AppCompatActivity {
         mListView.addOnItemTouchListener(new RecyclerTouchListener(this, mListView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                //startActivity(new Intent(getApplicationContext(), Display.class));
+                startActivity(new Intent(getApplicationContext(), Display.class));
                 Toast.makeText(getApplicationContext(), "Slides "+position, Toast.LENGTH_SHORT).show();
             }
 

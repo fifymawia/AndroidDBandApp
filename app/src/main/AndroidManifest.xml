@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Slides"></activity>
+        <activity android:name=".Views.Display"></activity>
+        <activity android:name=".Views.Slides" />
         <activity android:name=".Views.Sub_Strands" />
         <activity android:name=".Views.Strands" />
         <activity
