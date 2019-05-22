@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.daenjel.ilearn.R;
-import com.daenjel.ilearn.StrandsModel;
-import com.daenjel.ilearn.Sub_Strand_Model;
+import com.daenjel.ilearn.Model.Sub_Strand_Model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.daenjel.ilearn;
+package com.daenjel.ilearn.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.daenjel.ilearn.ViewModel.StrandsAdapter;
+import com.daenjel.ilearn.R;
+import com.daenjel.ilearn.Model.Sub_Strand_Model;
 import com.daenjel.ilearn.ViewModel.SubStrandAdapter;
 
 import java.util.ArrayList;

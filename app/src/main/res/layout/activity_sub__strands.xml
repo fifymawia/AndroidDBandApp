@@ -5,7 +5,7 @@
     android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sub_Strands">
+    tools:context=".Views.Sub_Strands">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listSubStrand"

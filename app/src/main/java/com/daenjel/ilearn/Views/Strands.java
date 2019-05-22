@@ -1,8 +1,7 @@
-package com.daenjel.ilearn;
+package com.daenjel.ilearn.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -12,6 +11,8 @@ import android.widget.Toast;
 
 import com.daenjel.ilearn.Interface.ClickListener;
 import com.daenjel.ilearn.Interface.RecyclerTouchListener;
+import com.daenjel.ilearn.R;
+import com.daenjel.ilearn.Model.StrandsModel;
 import com.daenjel.ilearn.ViewModel.StrandsAdapter;
 
 import java.util.ArrayList;

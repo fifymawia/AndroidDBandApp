@@ -3,7 +3,6 @@ package com.daenjel.ilearn.Views;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.daenjel.ilearn.Strands;
 import com.daenjel.ilearn.ViewModel.HomeGridAdapter;
 import com.daenjel.ilearn.Interface.ClickListener;
 import com.daenjel.ilearn.Interface.RecyclerTouchListener;

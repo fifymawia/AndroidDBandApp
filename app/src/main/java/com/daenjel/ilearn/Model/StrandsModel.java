@@ -1,4 +1,4 @@
-package com.daenjel.ilearn;
+package com.daenjel.ilearn.Model;
 
 public class StrandsModel {
 
