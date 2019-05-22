@@ -23,4 +23,16 @@
     <string name="register">Register</string>
     <string name="already_have_an_account"><u>Already have an account?</u></string>
     <string name="numbers">Numbers</string>
+
+    <string-array name="slides">
+        <item>Choose slide</item>
+        <item>Slide 1</item>
+        <item>Slide 2</item>
+        <item>Slide 3</item>
+        <item>Slide 4</item>
+        <item>Slide 5</item>
+        <item>Slide 6</item>
+        <item>Slide 7</item>
+        <item>Slide 8</item>
+    </string-array>
 </resources>

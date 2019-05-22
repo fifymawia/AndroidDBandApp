@@ -1,5 +1,6 @@
 package com.daenjel.ilearn.Views;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,8 +39,13 @@ public class Sub_Strands extends AppCompatActivity {
         strandsView.addOnItemTouchListener(new RecyclerTouchListener(this, strandsView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                startActivity(new Intent(getApplicationContext(), Slides.class));
+                //startActivity(new Intent(getApplicationContext(), Slides.class));
                 Toast.makeText(getApplicationContext(), "Sub Strand "+position, Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder slideDialog = new AlertDialog.Builder(Sub_Strands.this);
+                slideDialog.setIcon(R.mipmap.ic_launcher);
+                slideDialog.setTitle("Choose Slide");
+                slideDialog.setView(R.layout.slider);
+                slideDialog.show();
             }
 
             @Override

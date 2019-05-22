@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:text="Number Concept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/btnSpinner"
+            android:layout_margin="30dp"
+            android:entries="@array/slides"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_border"
+            android:layout_below="@id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="20dp">
+        </Spinner>
+        <Button
+            android:id="@+id/btnSlider"
+            android:text="Start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:background="@android:color/holo_blue_bright"
+            android:layout_below="@id/btnSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
