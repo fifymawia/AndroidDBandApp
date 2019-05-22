@@ -1,23 +1,23 @@
 package com.daenjel.ilearn.Model;
 
 public class Sub_Strand_Model {
-    private String lottie;
+    private String tracker;
     private String strands;
 
     public Sub_Strand_Model() {
     }
 
-    public Sub_Strand_Model(String lottie, String strands) {
-        this.lottie = lottie;
+    public Sub_Strand_Model( String strands,String tracker) {
+        this.tracker = tracker;
         this.strands = strands;
     }
 
-    public String getLottie() {
-        return lottie;
+    public String getTracker() {
+        return tracker;
     }
 
-    public void setLottie(String lottie) {
-        this.lottie = lottie;
+    public void setTracker(String tracker) {
+        this.tracker = tracker;
     }
 
     public String getStrands() {

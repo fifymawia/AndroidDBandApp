@@ -9,9 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.daenjel.ilearn.R;
 import com.daenjel.ilearn.Model.Sub_Strand_Model;
+import com.daenjel.ilearn.R;
 
 import java.util.List;
 
@@ -35,8 +34,8 @@ public class SubStrandAdapter extends RecyclerView.Adapter<SubStrandAdapter.MyHo
     @Override
     public void onBindViewHolder(@NonNull SubStrandAdapter.MyHolder holder, int position) {
         Sub_Strand_Model itemList = items.get(position);
-        holder.animationView.setAnimation(itemList.getLottie());
         holder.strand.setText(itemList.getStrands());
+        holder.tracker.setText(itemList.getTracker());
     }
 
     @Override
@@ -45,12 +44,11 @@ public class SubStrandAdapter extends RecyclerView.Adapter<SubStrandAdapter.MyHo
     }
 
     public class MyHolder extends RecyclerView.ViewHolder {
-        LottieAnimationView animationView;
-        TextView strand;
+        TextView strand,tracker;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
-            animationView = itemView.findViewById(R.id.strandImg);
+            tracker = itemView.findViewById(R.id.tracker);
             strand = itemView.findViewById(R.id.txtStrand);
         }
     }
