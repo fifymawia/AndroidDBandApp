@@ -4,35 +4,36 @@
     android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
-    android:layout_margin="20dp"
+    android:layout_margin="10dp"
     android:layout_height="wrap_content">
     <RelativeLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/strandImg"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            android:layout_marginLeft="30dp"
+            android:src="@drawable/pass"
             android:layout_centerHorizontal="true"
             android:layout_width="180dp"
-            android:layout_height="160dp"
-            android:layout_marginStart="30dp" />
+            android:layout_height="140dp" />
         <TextView
             android:id="@+id/txtStrand"
             android:text="@string/numbers"
             android:layout_below="@id/strandImg"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageView
-            android:layout_toEndOf="@id/txtStrand"
             android:layout_below="@id/strandImg"
             android:src="@drawable/ic_play_circle_outline_black_24dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_toRightOf="@id/txtStrand" />
+            android:layout_alignBottom="@id/txtStrand"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

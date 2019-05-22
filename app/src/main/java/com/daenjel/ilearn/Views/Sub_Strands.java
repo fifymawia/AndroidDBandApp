@@ -33,11 +33,9 @@ public class Sub_Strands extends AppCompatActivity {
     }
 
     private void loadItems() {
-        itemList.add(new Sub_Strand_Model("numbers.json","Numbers"));
-        itemList.add(new Sub_Strand_Model("measure.json","Measurement"));
-        itemList.add(new Sub_Strand_Model("geometry.json","Geometry"));
-        itemList.add(new Sub_Strand_Model("numbers.json","Numbers"));
-        itemList.add(new Sub_Strand_Model("measure.json","Measurement"));
-        itemList.add(new Sub_Strand_Model("data.json","Measurement"));
+        itemList.add(new Sub_Strand_Model("numbers.json","Number Concept"));
+        itemList.add(new Sub_Strand_Model("measure.json","Whole Numbers"));
+        itemList.add(new Sub_Strand_Model("geometry.json","Addition"));
+        itemList.add(new Sub_Strand_Model("numbers.json","Subtraction"));
     }
 }
