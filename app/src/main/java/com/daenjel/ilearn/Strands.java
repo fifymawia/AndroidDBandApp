@@ -1,6 +1,7 @@
 package com.daenjel.ilearn;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,7 +32,7 @@ public class Strands extends AppCompatActivity {
         StrandsAdapter adapter = new StrandsAdapter(this,itemList);
         strandsView.setHasFixedSize(true);
         strandsView.setAdapter(adapter);
-        strandsView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
+        strandsView.setLayoutManager(new GridLayoutManager(this,2));
         strandsView.addOnItemTouchListener(new RecyclerTouchListener(this,strandsView,new ClickListener(){
 
             @Override
