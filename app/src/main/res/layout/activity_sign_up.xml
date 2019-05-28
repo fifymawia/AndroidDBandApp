@@ -26,7 +26,7 @@
                     android:hint="@string/user_name"
                     android:drawableLeft="@drawable/user"
                     android:background="@drawable/edit_border"
-                    android:id="@+id/editSign_UserName"
+                    android:id="@+id/name"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
@@ -36,7 +36,7 @@
                     android:hint="@string/email"
                     android:drawableLeft="@drawable/user"
                     android:background="@drawable/edit_border"
-                    android:id="@+id/editSign_Email"
+                    android:id="@+id/email"
                     android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
@@ -46,7 +46,7 @@
                     android:hint="@string/password"
                     android:drawableLeft="@drawable/pass"
                     android:background="@drawable/edit_border"
-                    android:id="@+id/editSign_Pass"
+                    android:id="@+id/password"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
@@ -56,7 +56,7 @@
                     android:hint="@string/confirm_password"
                     android:drawableLeft="@drawable/pass"
                     android:background="@drawable/edit_border"
-                    android:id="@+id/editSign_ConfPass"
+                    android:id="@+id/cpassword"
                     android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
@@ -64,12 +64,14 @@
         </LinearLayout>
         <Button
             android:text="@string/register"
+            android:id="@+id/regbtn"
             android:textColor="@android:color/white"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_bright" />
+            android:background="@android:color/holo_blue_bright"
+            android:onClick="loginPage"/>
         <TextView
             android:layout_marginTop="20dp"
             android:layout_marginBottom="50dp"
@@ -80,7 +82,8 @@
             android:text="@string/already_have_an_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="loginPage"/>
+            android:onClick="Gotologin"
+            />
 
     </LinearLayout>
 

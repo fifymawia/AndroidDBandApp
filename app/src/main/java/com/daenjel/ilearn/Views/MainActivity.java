@@ -21,6 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +29,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    String name,email;
     List<Integer> itemList;
     RecyclerView mListView;
     @Override
@@ -44,6 +47,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        Intent gm = getIntent();
+
+        name = gm.getStringExtra("name");
+        email = gm.getStringExtra("email");
+
+
+
+        View headerview = navigationView.getHeaderView(0);
+        TextView tvname = (TextView) headerview.findViewById(R.id.tvname);
+        TextView tvemail = (TextView) headerview.findViewById(R.id.tvemail);
+
+
+        tvname.setText(name);
+        tvemail.setText(email);
 
         itemList = new ArrayList<>();
         mListView = findViewById(R.id.areaList);
