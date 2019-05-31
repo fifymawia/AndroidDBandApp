@@ -23,6 +23,8 @@
     <string name="register">Register</string>
     <string name="already_have_an_account"><u>Already have an account?</u></string>
     <string name="numbers">Numbers</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="request_password">Request Password</string>
 
     <string-array name="slides">
         <item>Choose slide</item>

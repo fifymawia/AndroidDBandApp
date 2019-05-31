@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/loginhome"
+    android:layout_height="match_parent"
+    tools:context=".Views.Forgotpwd">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:background="@drawable/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/editors"
+            android:orientation="vertical"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="@string/enter_email"
+                android:drawableLeft="@drawable/user"
+                android:background="@drawable/edit_border"
+                android:id="@+id/edtsendmail"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableStart="@drawable/user" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="@string/request_password"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendmail"
+            android:onClick="sendemail"
+            android:background="@android:color/holo_blue_bright" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

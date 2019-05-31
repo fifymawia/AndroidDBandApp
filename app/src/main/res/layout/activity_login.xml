@@ -44,12 +44,13 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txtForgot"
+            android:id="@+id/tv_forgot_password"
             android:layout_gravity="end"
             android:text="@string/forgot_password"
             android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="forgotpass"/>
         <Button
             android:text="@string/login"
             android:textColor="@android:color/white"

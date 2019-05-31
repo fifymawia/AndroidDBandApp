@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.daenjel.ilearn.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -29,6 +32,7 @@ public class SignUp extends AppCompatActivity {
     Button btn1;
     EditText edtname, edtemail, edtpwd, edtcpwd;
     ProgressDialog pd;
+    String NAME=null, PASSWORD=null, EMAIL=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,10 +141,12 @@ private class registration extends AsyncTask<String, String, String>
     @Override
     protected void onPostExecute(String resp) {
         pd.dismiss();
+        String err=null;
         if (resp.equals("successfully Registered")) {
             edtname.setText("");
             edtemail.setText("");
             edtpwd.setText("");
+
         }
 
             Intent login = new Intent(SignUp.this, Login.class);
