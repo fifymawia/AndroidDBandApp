@@ -2,35 +2,31 @@ package com.daenjel.ilearn.Views;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.daenjel.ilearn.ViewModel.HomeGridAdapter;
-import com.daenjel.ilearn.Interface.ClickListener;
-import com.daenjel.ilearn.Interface.RecyclerTouchListener;
-
-import android.view.View;
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.daenjel.ilearn.R;
-import com.google.android.material.navigation.NavigationView;
-import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.widget.TextView;
-import android.widget.Toast;
+import com.daenjel.ilearn.Interface.ClickListener;
+import com.daenjel.ilearn.Interface.RecyclerTouchListener;
+import com.daenjel.ilearn.R;
+import com.daenjel.ilearn.ViewModel.HomeGridAdapter;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
-    String name,email;
+    private SessionHandler session; String username,email;
     List<Integer> itemList;
     RecyclerView mListView;
     @Override
@@ -39,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        session = new SessionHandler(getApplicationContext());
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -50,9 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Intent gm = getIntent();
 
-        name = gm.getStringExtra("name");
+        username = gm.getStringExtra("username");
         email = gm.getStringExtra("email");
-
 
 
         View headerview = navigationView.getHeaderView(0);
@@ -60,8 +58,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView tvemail = (TextView) headerview.findViewById(R.id.tvemail);
 
 
-        tvname.setText(name);
+        tvname.setText(username);
         tvemail.setText(email);
+
 
         itemList = new ArrayList<>();
         mListView = findViewById(R.id.areaList);
@@ -118,12 +117,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(getApplicationContext(), SignUp.class));
         } else if (id == R.id.nav_settings) {
 
+
         } else if (id == R.id.nav_faqs) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_logout) {
+        }
+        else if (id == R.id.nav_logout) {
+            session.logoutUser();
+            Intent i = new Intent(
+                    MainActivity.this, Login.class);
+            startActivity(i);
 
+        } else if (id == R.id.resetpwd) {
+            startActivity(new Intent(getApplicationContext(), Resetpwd.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

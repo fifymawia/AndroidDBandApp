@@ -1,8 +1,5 @@
 package com.daenjel.ilearn.Views;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,9 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daenjel.ilearn.R;
 
@@ -56,10 +53,9 @@ String NAME,PASSWORD,EMAIL;
 
         startActivity(new Intent(getApplicationContext(), SignUp.class));
     }
-    public void forgotpass(View view){
+ public void forgotpass (View view){
         startActivity(new Intent(getApplicationContext(),Forgotpwd.class));
-    }
-
+ }
     public void gotohome(View v) {
         String name = edtname.getText().toString();
         String password = edtpwd.getText().toString();

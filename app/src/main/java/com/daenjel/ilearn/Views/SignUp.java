@@ -1,7 +1,5 @@
 package com.daenjel.ilearn.Views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daenjel.ilearn.R;
 
@@ -32,7 +32,7 @@ public class SignUp extends AppCompatActivity {
     Button btn1;
     EditText edtname, edtemail, edtpwd, edtcpwd;
     ProgressDialog pd;
-    String NAME=null, PASSWORD=null, EMAIL=null;
+    String NAME = null, PASSWORD = null, EMAIL = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,6 @@ public class SignUp extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.regbtn);
         pd = new ProgressDialog(SignUp.this);
     }
-
     public void loginPage(View view) {
 
 
@@ -74,8 +73,7 @@ public class SignUp extends AppCompatActivity {
 
 
 
-private class registration extends AsyncTask<String, String, String>
-{
+private class registration extends AsyncTask<String, String, String> {
     String response;
     HttpURLConnection hurlcon;
     URL url = null;
@@ -141,16 +139,29 @@ private class registration extends AsyncTask<String, String, String>
     @Override
     protected void onPostExecute(String resp) {
         pd.dismiss();
-        String err=null;
+        String err = null;
         if (resp.equals("successfully Registered")) {
             edtname.setText("");
             edtemail.setText("");
             edtpwd.setText("");
 
         }
+        try {
+            JSONObject root = new JSONObject(resp);
+            JSONObject user_data = root.getJSONObject("user_data");
+            NAME = user_data.getString("name");
+            PASSWORD = user_data.getString("password");
+            EMAIL = user_data.getString("email");
 
-            Intent login = new Intent(SignUp.this, Login.class);
-            startActivity(login);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            err = "Exception: " + e.getMessage();
+        }
+
+
+        Intent login = new Intent(SignUp.this, Login.class);
+        startActivity(login);
 
 
         Toast.makeText(SignUp.this, resp, Toast.LENGTH_SHORT).show();

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.daenjel.ilearn">
     <!-- Internet Permissions -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.Forgotpwd"></activity>
+        <activity android:name=".Views.Resetpwd"></activity>
+        <activity android:name=".Views.Forgotpwd" />
         <activity android:name=".Views.Display" />
         <activity android:name=".Views.Slides" />
         <activity android:name=".Views.Sub_Strands" />

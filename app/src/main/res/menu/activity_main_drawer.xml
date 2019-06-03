@@ -28,6 +28,10 @@
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="@string/menu_logout" />
+        <item
+            android:id="@+id/resetpwd"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Reset Password" />
     </group>
 
 </menu>
