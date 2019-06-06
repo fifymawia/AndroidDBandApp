@@ -1,23 +1,18 @@
 package com.daenjel.ilearn.Views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.daenjel.ilearn.R;
+import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.daenjel.ilearn.R;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,6 +29,7 @@ public class Forgotpwd extends AppCompatActivity {
     EditText edt1;
     Button btn1;
     ProgressDialog pd;
+    String  EMAIL = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +71,7 @@ public class Forgotpwd extends AppCompatActivity {
 
         protected String doInBackground(String... params) {
             try {
-                url = new URL("http://192.168.43.155/ilearnscripts/forgotpwd.php");
+                url = new URL("http://fredamawia.mightechsdcl.com/ilearn/forgotpwd.php");
 
 
             } catch (MalformedURLException e) {
@@ -104,17 +100,19 @@ public class Forgotpwd extends AppCompatActivity {
             } catch (IOException io) {
                 response = "2 " + io.getMessage();
             }
+
             try {
                 int responseCode = hurlcon.getResponseCode();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     InputStream in = hurlcon.getInputStream();
-                    BufferedReader br = new BufferedReader(new InputStreamReader(in));
+                    BufferedReader br = new BufferedReader(new InputStreamReader(in, "UTF-8"),8);
                     StringBuilder sb = new StringBuilder();
                     String result;
                     while ((result = br.readLine()) != null) {
                         sb.append(result);
 
                     }
+
                     response = sb.toString();
                 }
 
@@ -127,39 +125,32 @@ public class Forgotpwd extends AppCompatActivity {
         @Override
         protected void onPostExecute(String resp) {
             pd.dismiss();
+            /*String err = null;
+            if (resp.equals("Password Sent to your email check email")) {
 
+                edt1.setText("");
+
+
+            }
             try {
-                JSONArray users = new JSONArray(resp);
+                JSONObject root = new JSONObject(resp);
+                JSONObject user_data = root.getJSONObject("user_data");
+                EMAIL = user_data.getString("email");
 
-                for (int i = 0; i < users.length(); i++) {
-                    JSONObject user = users.getJSONObject(i);
-                    String email = user.getString("email");
-
-
-                    if (!email.equals(null) && !email.equals(null)) {
-
-                        edt1.setText("");
-
-                        Intent gm = new Intent(Forgotpwd.this, Login.class);
-
-
-                        gm.putExtra("email", email);
-
-                        startActivity(gm);
-
-
-                    }
-
-
-                }
 
             } catch (JSONException e) {
+                e.printStackTrace();
+                err = "Exception: " + e.getMessage();
+            }*/
 
-                Toast.makeText(Forgotpwd.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+
+            Intent login = new Intent(Forgotpwd.this, Login.class);
+            startActivity(login);
+
+
+            Toast.makeText(Forgotpwd.this, resp, Toast.LENGTH_SHORT).show();
         }
-
     }
+
+
 }
-
-

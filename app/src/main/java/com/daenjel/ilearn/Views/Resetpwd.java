@@ -82,7 +82,7 @@ public class Resetpwd extends AppCompatActivity {
         protected String doInBackground(String... params){
 
             try{
-                url = new URL("http://192.168.43.155/ilearnscripts/changepwd.php");//access to php script
+                url = new URL("http://fredamawia.mightechsdcl.com/ilearn/changepwd.php");//access to php script
 
             }catch (MalformedURLException e){
                 response = "URL "+e.getMessage();

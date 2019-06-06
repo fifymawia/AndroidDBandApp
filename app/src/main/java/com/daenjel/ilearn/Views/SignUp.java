@@ -87,7 +87,7 @@ private class registration extends AsyncTask<String, String, String> {
 
     protected String doInBackground(String... params) {
         try {
-            url = new URL("http://192.168.43.155/ilearnscripts/signup.php");
+            url = new URL("http://fredamawia.mightechsdcl.com/ilearn/register.php");
 
 
         } catch (MalformedURLException e) {
@@ -140,7 +140,7 @@ private class registration extends AsyncTask<String, String, String> {
     protected void onPostExecute(String resp) {
         pd.dismiss();
         String err = null;
-        if (resp.equals("successfully Registered")) {
+        if (resp.equals("you have registered verify email")) {
             edtname.setText("");
             edtemail.setText("");
             edtpwd.setText("");

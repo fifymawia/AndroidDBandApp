@@ -87,7 +87,7 @@ String NAME,PASSWORD,EMAIL;
 
         protected String doInBackground(String... params) {
             try {
-                url = new URL("http://192.168.43.155/ilearnscripts/signin.php");
+                url = new URL("http://fredamawia.mightechsdcl.com/ilearn/login.php");
 
             } catch (MalformedURLException e) {
                 response = "URL " + e.getMessage();
