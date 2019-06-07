@@ -30,20 +30,19 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Login extends AppCompatActivity {
-Button btnlog;
-EditText edtname,edtpwd;
-ProgressDialog pd;
-String NAME,PASSWORD,EMAIL;
+    Button btnlog;
+    EditText edtname, edtpwd;
+    ProgressDialog pd;
+    String NAME, PASSWORD, EMAIL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-         edtname = (EditText)findViewById(R.id.editLogin_UserName);
-         edtpwd = (EditText)findViewById(R.id.editLogin_Pass);
-         btnlog = (Button)findViewById(R.id.btnlogin);
+        edtname = (EditText) findViewById(R.id.editLogin_UserName);
+        edtpwd = (EditText) findViewById(R.id.editLogin_Pass);
+        btnlog = (Button) findViewById(R.id.btnlogin);
         pd = new ProgressDialog(Login.this);
-
 
 
     }
@@ -53,9 +52,11 @@ String NAME,PASSWORD,EMAIL;
 
         startActivity(new Intent(getApplicationContext(), SignUp.class));
     }
- public void forgotpass (View view){
-        startActivity(new Intent(getApplicationContext(),Forgotpwd.class));
- }
+
+    public void forgotpass(View view) {
+        startActivity(new Intent(getApplicationContext(), Forgotpwd.class));
+    }
+
     public void gotohome(View v) {
         String name = edtname.getText().toString();
         String password = edtpwd.getText().toString();
@@ -134,20 +135,11 @@ String NAME,PASSWORD,EMAIL;
             return response;
         }
 
+
         @Override
         protected void onPostExecute(String resp) {
             pd.dismiss();
-            String err =null;
-            try {
-                JSONObject root = new JSONObject(resp);
-                JSONObject user_data = root.getJSONObject("user_data");
-                NAME = user_data.getString("name");
-                PASSWORD = user_data.getString("password");
-                EMAIL = user_data.getString("email");
-            } catch (JSONException e) {
-                e.printStackTrace();
-                err = "Exception: "+e.getMessage();
-            }
+
 
             try{
                 JSONArray users = new JSONArray(resp);
@@ -173,18 +165,21 @@ String NAME,PASSWORD,EMAIL;
 
 
                     }
-
-
-                }
-
-            }catch (JSONException e){
-
-               Toast.makeText(com.daenjel.ilearn.Views.Login.this,e.getMessage(),Toast.LENGTH_SHORT).show();
-            }
-        }
-
-
-
-    }
 }
 
+
+            }catch (JSONException e)
+
+            {
+
+               // Intent login = new Intent(Login.this, MainActivity.class);
+               // startActivity(login);
+
+                Toast.makeText(Login.this, resp, Toast.LENGTH_SHORT).show();
+
+            }
+
+
+        }
+    }
+}

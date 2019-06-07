@@ -26,7 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private SessionHandler session; String username,email;
+    private SessionHandler session; String name,email;
     List<Integer> itemList;
     RecyclerView mListView;
     @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Intent gm = getIntent();
 
-        username = gm.getStringExtra("username");
+        name = gm.getStringExtra("name");
         email = gm.getStringExtra("email");
 
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView tvemail = (TextView) headerview.findViewById(R.id.tvemail);
 
 
-        tvname.setText(username);
+        tvname.setText(name);
         tvemail.setText(email);
 
 

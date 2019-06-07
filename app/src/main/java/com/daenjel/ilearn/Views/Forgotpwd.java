@@ -144,7 +144,7 @@ public class Forgotpwd extends AppCompatActivity {
             }*/
 
 
-            Intent login = new Intent(Forgotpwd.this, Login.class);
+            Intent login = new Intent(Forgotpwd.this, Resetpasshere.class);
             startActivity(login);
 
 

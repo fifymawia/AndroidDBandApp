@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.Resetpwd"></activity>
+        <activity android:name=".Views.Resetpasshere"></activity>
+        <activity android:name=".Views.Resetpwd" />
         <activity android:name=".Views.Forgotpwd" />
         <activity android:name=".Views.Display" />
         <activity android:name=".Views.Slides" />
